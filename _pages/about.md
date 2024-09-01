@@ -10,6 +10,7 @@ Hello, I am Hao Li, a third-year Ph.D. student at the School of Electronic Infor
 
 🌟[Email](whulh@whu.edu.cn) / [Github](https://github.com/Lihaogx) / [Wechat](../images/wechat.jpg) / [Google Scholar](https://scholar.google.com/citations?hl=zh-CN&user=xv78JsEAAAAJ)
 
+
 🔎 Research
 ======
 My research interests lie in the integration of social networks, graph neural networks, and large language models. Specifically, I work in the following areas:
@@ -25,6 +26,9 @@ My research interests lie in the integration of social networks, graph neural ne
 3. **Large Language Models and Social Sciences**
    - Agents and Social Simulation
    - Sociological Research Methods Enhanced by Large Language Models
+======
+
+
 
 ⚡ News
 ======
@@ -33,17 +37,15 @@ My research interests lie in the integration of social networks, graph neural ne
 📰 Publications
 ======
 <div style="display: flex; align-items: center;">
-  <img src="../images/DNDN.pdf" alt="Dynamic Neural Dowker Networks" style="max-width: 50%; margin-right: 20px;">
+  <img src="../images/DNDN.jpg" alt="Dynamic Neural Dowker Networks" style="max-width: 50%; margin-right: 20px;">
   <div>
     <h3><a href="[https://dl.acm.org/doi/abs/10.1145/3637528.3671980]" target="_blank">Federated Graph Learning under Domain Shift with Generalizable Prototypes</a></h3>
     <p><strong>Hao Li</strong>, Jiang, Hao and Jiajun, Fan and Ye, Dongsheng and Du, Liang<br>
     Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining(KDD), 2024</p>
   </div>
 </div>
-------
 
-📚 Manuscripts
-======
+
 
 📝 Service
 ======
