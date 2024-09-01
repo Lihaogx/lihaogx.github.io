@@ -146,5 +146,5 @@ My research interests lie in the integration of social networks, graph neural ne
 
 # 🎓 Educations
 <hr >
-- 2015-2019 Bachelor’s Degree, Electronic Information School,, Wuhan University, China
-- 2019-present Integrated Master-Ph.D. Student,  Electronic Information School, Wuhan University, China
+- 2015-2019 Bachelor’s Degree, Electronic Information School, Wuhan University, China
+- 2019-present Integrated Master-Ph.D. Student, Electronic Information School, Wuhan University, China
