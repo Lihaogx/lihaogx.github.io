@@ -108,7 +108,6 @@ My research interests lie in the integration of social networks, graph neural ne
   </div>
 </div>
 
-<hr >
 <div style="display: flex; align-items: center;">
   <img src="../images/DHGAT.jpg" alt="DHGAT" style="width: 350px;">
   <div>
@@ -118,7 +117,6 @@ My research interests lie in the integration of social networks, graph neural ne
   </div>
 </div>
 
-<hr >
 <div style="display: flex; align-items: center;">
   <img src="../images/fedogm.jpg" alt="Prediction of Occupational Group Mobility" style="width: 350px;">
   <div>
