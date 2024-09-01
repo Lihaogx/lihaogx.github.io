@@ -87,7 +87,7 @@ My research interests lie in the integration of social networks, graph neural ne
 <br/>
 
 # 🔥 News
-
+<hr >
 
 <div style="max-height: 200px; overflow-y: auto;">
 <ul>
@@ -140,7 +140,7 @@ My research interests lie in the integration of social networks, graph neural ne
 
 # 📝 Service
 <hr >
-## Conference Reviewe
+### Conference Reviewer
 - Reviewer for KDD'2024
 - Reviewer for ICDM'2024
 
