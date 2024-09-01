@@ -81,9 +81,9 @@ My research interests lie in the integration of social networks, graph neural ne
    - Opinion Dynamics on Graphs
    - Special Structures in Social Graphs
 
-3. **Large Language Models and Social Sciences**
+3. **Large Language Models for Social Sciences**
    - Agents and Social Simulation
-   - Sociological Research Methods Enhanced by Large Language Models
+   - Enhancing Sociological Research through Large Language Models
 <br/>
 
 # 🔥 News
