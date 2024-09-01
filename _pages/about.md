@@ -70,6 +70,7 @@ Hello, I am Hao Li, a third-year Ph.D. student at the School of Electronic Infor
 
 
 # 🔎 Research 
+<hr >
 My research interests lie in the integration of social networks, graph neural networks, and large language models. Specifically, I work in the following areas:
 
 1. **Graph Neural Networks**
@@ -98,7 +99,7 @@ My research interests lie in the integration of social networks, graph neural ne
 
 
 # 📃 Publications 
-
+<hr >
 
 <div style="display: flex; align-items: center;">
   <img src="../images/DNDN.jpg" alt="Dynamic Neural Dowker Networks" style="width: 350px;">
@@ -116,10 +117,12 @@ My research interests lie in the integration of social networks, graph neural ne
 
 
 # 📝 Service
+<hr >
 ## Conference Reviewe
 - Reviewer for KDD'2024
 - Reviewer for ICDM'2024
 
 # 🎓 Educations
+<hr >
 - 2015-2019 Bachelor’s Degree, Electronic Information School,, Wuhan University, China
 - 2019-present Integrated Master-Ph.D. Student,  Electronic Information School, Wuhan University, China
