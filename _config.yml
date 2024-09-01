@@ -7,7 +7,6 @@
 # server process.
 
 # Basic Site Settings
-locale                   : "en-US"
 title                    : "Li Hao's Homepage"
 title_separator          : "-"
 name                     : &name "Li Hao"
@@ -40,7 +39,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "https://github.com/Lihaogx"
+  github           : "Lihaogx"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
