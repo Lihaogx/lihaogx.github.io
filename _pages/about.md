@@ -105,14 +105,36 @@ My research interests lie in the integration of social networks, graph neural ne
   <img src="../images/DNDN.jpg" alt="Dynamic Neural Dowker Networks" style="width: 350px;">
   <div>
     <h3><a href="https://dl.acm.org/doi/abs/10.1145/3637528.3671980" target="_blank">Dynamic Neural Dowker Network: Approximating Persistent Homology in Dynamic Directed Graphs</a></h3>
-    <p><strong>Hao Li</strong>, Jiang, Hao, Fan, Jiajun, Ye, Dongsheng, Du, Liang<br>
+    <p><strong>Hao Li</strong>, Jiang Hao, Fan Jiajun, Ye Dongsheng, Du Liang<br>
     Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD), 2024</p>
   </div>
 </div>
 
+
+
 <hr >
+<div style="display: flex; align-items: center;">
+  <img src="../images/DHGAT.jpg" alt="DHGAT" style="width: 350px;">
+  <div>
+    <h3><a href="https://www.sciencedirect.com/science/article/abs/pii/S092523122301161X" target="_blank">DHGAT: Hyperbolic representation learning on dynamic graphs via attention networks</a></h3>
+    <p><strong>Hao Li</strong>, Hao Jiang, Dongsheng Ye, Qiang Wang, Liang Du, Yuanyuan Zeng, Liu yuan, Yingxue Wang, Cheng Chen<br>
+    Neurocomputing</p>
+  </div>
+</div>
 
 
+<hr >
+<div style="display: flex; align-items: center;">
+  <img src="../images/fedogm.jpg" alt="Prediction of Occupational Group Mobility" style="width: 350px;">
+  <div>
+    <h3><a href="https://ieeexplore.ieee.org/abstract/document/10415798/" target="_blank">Federated Learning for Privacy-Preserving Prediction of Occupational Group Mobility Using Multi-Source Mobile Data</a></h3>
+    <p><strong>Hao Li</strong>, Jiang Hao, Haoran Xian, Qimei Chen<br>
+    IEEE International Conference on Data Mining (ICDM), 2023</p>
+  </div>
+</div>
+
+
+<hr >
 <br/>
 
 
