@@ -40,16 +40,11 @@ My research interests lie in the integration of social networks, graph neural ne
 <div style="display: flex; align-items: center;">
   <img src="../images/DNDN.jpg" alt="Dynamic Neural Dowker Networks" style="width: 300px; margin-right: 20px;">
   <div>
-    <h3><a href="https://dl.acm.org/doi/abs/10.1145/3637528.3671980" target="_blank">Federated Graph Learning under Domain Shift with Generalizable Prototypes</a></h3>
+    <h3><a href="https://dl.acm.org/doi/abs/10.1145/3637528.3671980" target="_blank">Dynamic Neural Dowker Network: Approximating Persistent Homology in Dynamic Directed Graphs</a></h3>
     <p><strong>Hao Li</strong>, Jiang, Hao, Fan, Jiajun, Ye, Dongsheng, Du, Liang<br>
     Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD), 2024</p>
   </div>
 </div>
-
-
-
-
-
 
 
 
