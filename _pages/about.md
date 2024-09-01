@@ -87,7 +87,6 @@ My research interests lie in the integration of social networks, graph neural ne
 <br/>
 
 # 🔥 News
-<hr >
 <div style="max-height: 200px; overflow-y: auto;">
 <ul>
   <li><em>2024.05:</em> ✨✨✨ One paper about persisitent homology on dynamic graphs is accepted by <strong>KDD 2024<strong>. See you in Barcelona!</li>
