@@ -12,7 +12,7 @@ Hello, I am Hao Li, a third-year Ph.D. student at the School of Electronic Infor
 
 
 🔎 Research
-======
+------
 My research interests lie in the integration of social networks, graph neural networks, and large language models. Specifically, I work in the following areas:
 
 1. **Graph Neural Networks**
@@ -27,10 +27,8 @@ My research interests lie in the integration of social networks, graph neural ne
    - Agents and Social Simulation
    - Sociological Research Methods Enhanced by Large Language Models
 
-
-
 ⚡ News
-======
+------
 - 2024.05: ✨✨✨ One paper about persisitent homology on dynamic graphs is accepted by **KDD 2024**. See you in Barcelona!
 
 📰 Publications
@@ -48,18 +46,13 @@ My research interests lie in the integration of social networks, graph neural ne
 
 
 📝 Service
-======
+------
 **Conference Reviewer**
 - Reviewer for KDD'2024
 - Reviewer for ICDM'2024
 
 
 🎓 Educations
-======
+------
 - 2015-2019 Bachelor’s Degree, Electronic Information School,, Wuhan University, China
 - 2019-present Integrated Master-Ph.D. Student,  Electronic Information School, Wuhan University, China
-
-
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
