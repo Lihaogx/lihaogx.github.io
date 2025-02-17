@@ -90,7 +90,9 @@ My research interests lie in the integration of social networks, graph neural ne
 <hr >
 <div style="max-height: 200px; overflow-y: auto;">
   <ul>
-    <li><em>2024.05:</em> ✨✨✨ One paper about persisitent homology on dynamic graphs is accepted by <strong>KDD 2024</strong>. See you in Barcelona!</li>
+    <li><strong>2025.01:</strong> Our paper "UniGO: A Unified Graph Neural Network for Modeling Opinion Dynamics on Graphs" has been accepted by <strong>WWW 2025</strong>. 🎉 See you in Sydney!</li>
+    <li><strong>2025.12:</strong> Our paper "Political Actor Agent: Simulating Legislative System for Roll Call Votes Prediction with Large Language Models" has been accepted as an oral presentation by <strong>AAAI 2025</strong>. 🎉 See you in Philadelphia!</li>
+    <li><strong>2024.05:</strong> One paper "Dynamic Neural Dowker Network: Approximating Persistent Homology in Dynamic Directed Graphs" has been accepted at <strong>KDD 2024</strong>. 🎉 See you in Barcelona!</li>
   </ul>
 </div>
 
@@ -98,6 +100,23 @@ My research interests lie in the integration of social networks, graph neural ne
 
 # 📃 Publications 
 <hr >
+<div style="display: flex; align-items: center;">
+  <img src="../images/UniGO.pdf" alt="UniGO" style="width: 350px;">
+  <div>
+    <h3><a href="https://openreview.net/forum?id=bElAkCL6zb#discussion" target="_blank">UniGO: A Unified Graph Neural Network for Modeling Opinion Dynamics on Graphs</a></h3>
+    <p><strong>Hao Li</strong>, Jiang Hao, Yuke Zheng, Hao Sun, Wenying Gong<br>
+    THE WEB CONFERENCE, 2025</p>
+  </div>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <img src="../images/PAA.pdf" alt="Political Actor Agent" style="width: 350px;">
+  <div>
+    <h3><a href="https://arxiv.org/abs/2412.07144" target="_blank">Political Actor Agent: Simulating Legislative System for Roll Call Votes Prediction with Large Language Models</a></h3>
+    <p><strong>Hao Li</strong>, Ruoyuan Gong, Jiang Hao<br>
+    Proceedings of the AAAI conference on artificial intelligence(AAAI), 2025</p>
+  </div>
+</div>
 
 <div style="display: flex; align-items: center;">
   <img src="../images/DNDN.jpg" alt="Dynamic Neural Dowker Networks" style="width: 350px;">
@@ -137,6 +156,8 @@ My research interests lie in the integration of social networks, graph neural ne
 # 📝 Service
 <hr >
 ### Conference Reviewer
+- Reviewer for WWW'2025
+- Reviewer for ICWSM'2025
 - Reviewer for KDD'2024
 - Reviewer for ICDM'2024
 
