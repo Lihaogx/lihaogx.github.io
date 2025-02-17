@@ -101,7 +101,7 @@ My research interests lie in the integration of social networks, graph neural ne
 # 📃 Publications 
 <hr >
 <div style="display: flex; align-items: center;">
-  <img src="../images/UniGO.pdf" alt="UniGO" style="width: 350px;">
+  <img src="../images/UniGO.jpg" alt="UniGO" style="width: 350px;">
   <div>
     <h3><a href="https://openreview.net/forum?id=bElAkCL6zb#discussion" target="_blank">UniGO: A Unified Graph Neural Network for Modeling Opinion Dynamics on Graphs</a></h3>
     <p><strong>Hao Li</strong>, Jiang Hao, Yuke Zheng, Hao Sun, Wenying Gong<br>
@@ -110,7 +110,7 @@ My research interests lie in the integration of social networks, graph neural ne
 </div>
 
 <div style="display: flex; align-items: center;">
-  <img src="../images/PAA.pdf" alt="Political Actor Agent" style="width: 350px;">
+  <img src="../images/PAA.jpg" alt="Political Actor Agent" style="width: 350px;">
   <div>
     <h3><a href="https://arxiv.org/abs/2412.07144" target="_blank">Political Actor Agent: Simulating Legislative System for Roll Call Votes Prediction with Large Language Models</a></h3>
     <p><strong>Hao Li</strong>, Ruoyuan Gong, Jiang Hao<br>
