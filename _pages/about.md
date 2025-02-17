@@ -196,7 +196,7 @@ My research interests lie in the integration of social networks, graph neural ne
   <div>
     <h3><a href="https://openreview.net/forum?id=bElAkCL6zb#discussion" target="_blank">UniGO: A Unified Graph Neural Network for Modeling Opinion Dynamics on Graphs</a></h3>
     <p><strong>Hao Li</strong>, Jiang Hao, Yuke Zheng, Hao Sun, Wenying Gong<br>
-    THE WEB CONFERENCE, 2025</p>
+    THE WEB CONFERENCE(WWW), 2025</p>
   </div>
 </div>
 
