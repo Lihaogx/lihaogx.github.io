@@ -164,7 +164,6 @@ Hello, I am Hao Li, a third-year Ph.D. student at the School of Electronic Infor
 
 
 # 🔎 Research 
-<hr >
 My research interests lie in the integration of social networks, graph neural networks, and large language models. Specifically, I work in the following areas:
 
 1. **Graph Neural Networks**
@@ -178,10 +177,9 @@ My research interests lie in the integration of social networks, graph neural ne
 3. **Large Language Models for Social Sciences**
    - Agents and Social Simulation
    - Enhancing Sociological Research through Large Language Models
-<br/>
+<hr/>
 
 # 🔥 News
-<hr >
 <div style="max-height: 200px; overflow-y: auto;">
   <ul>
     <li><strong>2025.01:</strong> Our paper "UniGO: A Unified Graph Neural Network for Modeling Opinion Dynamics on Graphs" has been accepted by <strong>WWW 2025</strong>. 🎉 See you in Sydney!</li>
@@ -189,11 +187,10 @@ My research interests lie in the integration of social networks, graph neural ne
     <li><strong>2024.05:</strong> One paper "Dynamic Neural Dowker Network: Approximating Persistent Homology in Dynamic Directed Graphs" has been accepted at <strong>KDD 2024</strong>. 🎉 See you in Barcelona!</li>
   </ul>
 </div>
+<hr/>
 
-<br/>
 
 # 📃 Publications 
-<hr >
 <div style="display: flex; align-items: center;">
   <img src="../images/UniGO.jpg" alt="UniGO" style="width: 350px;">
   <div>
@@ -203,7 +200,7 @@ My research interests lie in the integration of social networks, graph neural ne
   </div>
 </div>
 
-<hr >
+<br/>
 
 <div style="display: flex; align-items: center;">
   <img src="../images/PAA.jpg" alt="Political Actor Agent" style="width: 350px;">
@@ -214,7 +211,7 @@ My research interests lie in the integration of social networks, graph neural ne
   </div>
 </div>
 
-<hr >
+<br >
 
 <div style="display: flex; align-items: center;">
   <img src="../images/DNDN.jpg" alt="Dynamic Neural Dowker Networks" style="width: 350px;">
@@ -225,7 +222,7 @@ My research interests lie in the integration of social networks, graph neural ne
   </div>
 </div>
 
-<hr >
+<br/>
 
 <div style="display: flex; align-items: center;">
   <img src="../images/DHGAT.jpg" alt="DHGAT" style="width: 350px;">
@@ -236,7 +233,7 @@ My research interests lie in the integration of social networks, graph neural ne
   </div>
 </div>
 
-<hr >
+<br/>
 
 <div style="display: flex; align-items: center;">
   <img src="../images/fedogm.jpg" alt="Prediction of Occupational Group Mobility" style="width: 350px;">
@@ -247,19 +244,18 @@ My research interests lie in the integration of social networks, graph neural ne
   </div>
 </div>
 
-<hr >
-<br/>
+<hr/>
 
 
 # 📝 Service
-<hr >
 ### Conference Reviewer
 - Reviewer for WWW'2025
 - Reviewer for ICWSM'2025
 - Reviewer for KDD'2024
 - Reviewer for ICDM'2024
 
+<hr/>
+
 # 🎓 Educations
-<hr >
 - 2015-2019 Bachelor's Degree, Electronic Information School, Wuhan University, China
 - 2019-present Integrated Master-Ph.D. Student, Electronic Information School, Wuhan University, China
