@@ -21,11 +21,9 @@ redirect_from:
   }
 
   hr {
-    border: 1px solid #ebebeb; /* 调整分隔线的颜色和样式 */
-    /* margin: 10px;  */
-    clear: both; 
+    margin: 40px 0;
+    border-color: #eee;
   }
-
 
   dl dd {
   color: #666; 
@@ -52,6 +50,102 @@ redirect_from:
     color: red;
   }
 
+  /* 新增标题统一样式 */
+  h2 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin: 30px 0 15px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+  }
+
+  h3 {
+    font-size: 1.4em;
+    margin: 20px 0 10px;
+  }
+
+  /* 修改现有图片样式 */
+  .pub-item {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin: 40px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .pub-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  .pub-item img {
+    width: 40%;
+    min-width: 300px;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    .pub-item {
+      flex-direction: column;
+    }
+    .pub-item img {
+      width: 100%;
+      min-width: auto;
+    }
+  }
+
+  /* 新增颜色规范 */
+  :root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --text-color: #444;
+  }
+
+  body {
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+
+  a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+  }
+
+  ul, ol {
+    padding-left: 30px;
+    margin: 15px 0;
+  }
+
+  li {
+    margin: 8px 0;
+    line-height: 1.5;
+  }
+
+  /* 新增移动端优化 */
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.5em;
+    }
+    
+    .pub-item {
+      padding: 15px;
+      margin: 25px 0;
+    }
+    
+    .pub-item h3 {
+      font-size: 1.2em;
+    }
+  }
 </style>
 
 {% if site.google_scholar_stats_use_cdn %}
@@ -109,6 +203,8 @@ My research interests lie in the integration of social networks, graph neural ne
   </div>
 </div>
 
+<hr >
+
 <div style="display: flex; align-items: center;">
   <img src="../images/PAA.jpg" alt="Political Actor Agent" style="width: 350px;">
   <div>
@@ -117,6 +213,8 @@ My research interests lie in the integration of social networks, graph neural ne
     Proceedings of the AAAI conference on artificial intelligence(AAAI), 2025</p>
   </div>
 </div>
+
+<hr >
 
 <div style="display: flex; align-items: center;">
   <img src="../images/DNDN.jpg" alt="Dynamic Neural Dowker Networks" style="width: 350px;">
@@ -163,5 +261,5 @@ My research interests lie in the integration of social networks, graph neural ne
 
 # 🎓 Educations
 <hr >
-- 2015-2019 Bachelor’s Degree, Electronic Information School, Wuhan University, China
+- 2015-2019 Bachelor's Degree, Electronic Information School, Wuhan University, China
 - 2019-present Integrated Master-Ph.D. Student, Electronic Information School, Wuhan University, China
