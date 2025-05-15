@@ -182,8 +182,9 @@ My research interests lie in the integration of social networks, graph neural ne
 # 🔥 News
 <div style="max-height: 200px; overflow-y: auto;">
   <ul>
+    <li><strong>2025.04:</strong> Our paper "TMetaNet: Topological Meta-Learning Framework for Dynamic Link Prediction" has been accepted by <strong>ICML 2025</strong>. 🎉 See you in Vancouver!</li>
     <li><strong>2025.01:</strong> Our paper "UniGO: A Unified Graph Neural Network for Modeling Opinion Dynamics on Graphs" has been accepted by <strong>WWW 2025</strong>. 🎉 See you in Sydney!</li>
-    <li><strong>2025.12:</strong> Our paper "Political Actor Agent: Simulating Legislative System for Roll Call Votes Prediction with Large Language Models" has been accepted as an oral presentation by <strong>AAAI 2025</strong>. 🎉 See you in Philadelphia!</li>
+    <li><strong>2024.12:</strong> Our paper "Political Actor Agent: Simulating Legislative System for Roll Call Votes Prediction with Large Language Models" has been accepted as an oral presentation by <strong>AAAI 2025</strong>. 🎉 See you in Philadelphia!</li>
     <li><strong>2024.05:</strong> One paper "Dynamic Neural Dowker Network: Approximating Persistent Homology in Dynamic Directed Graphs" has been accepted at <strong>KDD 2024</strong>. 🎉 See you in Barcelona!</li>
   </ul>
 </div>
