@@ -160,7 +160,7 @@ redirect_from:
 
 Hello, I am Hao Li, a third-year Ph.D. student at the School of Electronic Information at Wuhan University, under the supervision of Professor [Hao Jiang](http://eis.whu.edu.cn/index/szdwDetail?rsh=00007828&newskind_id=20160320222026165YIdDsQIbgNtoE). My research interests lie in the integration of social networks, graph neural networks, and large language models.
 
-🌟[Email](whulh@whu.edu.cn) / [Github](https://github.com/Lihaogx) / [Wechat](../images/wechat.jpg) / [Google Scholar](https://scholar.google.com/citations?hl=zh-CN&user=xv78JsEAAAAJ)
+🌟[Email](whulh@whu.edu.cn) / [Github](https://github.com/Lihaogx) / [Google Scholar](https://scholar.google.com/citations?hl=zh-CN&user=xv78JsEAAAAJ)
 
 
 # 🔎 Research 
