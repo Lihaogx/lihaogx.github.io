@@ -158,7 +158,7 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 
-Hello, I am Hao Li, a third-year Ph.D. student at the School of Electronic Information at Wuhan University, under the supervision of Professor [Hao Jiang](http://eis.whu.edu.cn/index/szdwDetail?rsh=00007828&newskind_id=20160320222026165YIdDsQIbgNtoE). My research interests lie in the integration of social networks, graph neural networks, and large language models.
+Hello, I am Hao Li, a third-year Ph.D. student at the School of Electronic Information at Wuhan University, under the supervision of Professor [Hao Jiang](http://eis.whu.edu.cn/index/szdwDetail?rsh=00007828&newskind_id=20160320222026165YIdDsQIbgNtoE). My research interests lie in the integration of social networks, graph neural networks, and large language models. 
 
 🌟[Email](whulh@whu.edu.cn) / [Github](https://github.com/Lihaogx) / [Google Scholar](https://scholar.google.com/citations?hl=zh-CN&user=xv78JsEAAAAJ)
 
@@ -182,8 +182,8 @@ My research interests lie in the integration of social networks, graph neural ne
 # 🔥 News
 <div style="max-height: 200px; overflow-y: auto;">
   <ul>
-    <li><strong>2025.04:</strong> Our paper "TMetaNet: Topological Meta-Learning Framework for Dynamic Link Prediction" has been accepted by <strong>ICML 2025</strong>. 🎉 See you in Vancouver!</li>
-    <li><strong>2025.01:</strong> Our paper "UniGO: A Unified Graph Neural Network for Modeling Opinion Dynamics on Graphs" has been accepted by <strong>WWW 2025</strong>. 🎉 See you in Sydney!</li>
+    <li><strong>2025.05:</strong> Our paper "TMetaNet: Topological Meta-Learning Framework for Dynamic Link Prediction." has been accepted by <strong>ICML 2025</strong>. 🎉 See you in Vancouver!</li>
+    <li><strong>2025.01:</strong> Our paper "UniGO: A Unified Graph Neural Network for Modeling Opinion Dynamics on Graphs" has been accepted as an oral presentation by <strong>WWW 2025</strong>. 🎉 See you in Sydney!</li>
     <li><strong>2024.12:</strong> Our paper "Political Actor Agent: Simulating Legislative System for Roll Call Votes Prediction with Large Language Models" has been accepted as an oral presentation by <strong>AAAI 2025</strong>. 🎉 See you in Philadelphia!</li>
     <li><strong>2024.05:</strong> One paper "Dynamic Neural Dowker Network: Approximating Persistent Homology in Dynamic Directed Graphs" has been accepted at <strong>KDD 2024</strong>. 🎉 See you in Barcelona!</li>
   </ul>
@@ -192,10 +192,20 @@ My research interests lie in the integration of social networks, graph neural ne
 
 
 # 📃 Publications 
+
+<div style="display: flex; align-items: center;">
+  <img src="../images/TMetaNet.jpg" alt="TMetaNet" style="width: 350px;">
+  <div>
+    <h3><a href="https://icml.cc/virtual/2025/poster/46188" target="_blank">TMetaNet: Topological Meta-Learning Framework for Dynamic Link Prediction</a></h3>
+    <p><strong>Hao Li</strong>, Hao Wan, Yuzhou Chen, Dongsheng Ye, Yulia Gel, Hao Jiang<br>
+    International Conference on Machine Learning (ICML), 2025</p>
+  </div>
+</div>
+
 <div style="display: flex; align-items: center;">
   <img src="../images/UniGO.jpg" alt="UniGO" style="width: 350px;">
   <div>
-    <h3><a href="https://openreview.net/forum?id=bElAkCL6zb#discussion" target="_blank">UniGO: A Unified Graph Neural Network for Modeling Opinion Dynamics on Graphs</a></h3>
+    <h3><a href="https://dl.acm.org/doi/abs/10.1145/3696410.3714636" target="_blank">UniGO: A Unified Graph Neural Network for Modeling Opinion Dynamics on Graphs</a></h3>
     <p><strong>Hao Li</strong>, Jiang Hao, Yuke Zheng, Hao Sun, Wenying Gong<br>
     THE WEB CONFERENCE(WWW), 2025</p>
   </div>
@@ -206,7 +216,7 @@ My research interests lie in the integration of social networks, graph neural ne
 <div style="display: flex; align-items: center;">
   <img src="../images/PAA.jpg" alt="Political Actor Agent" style="width: 350px;">
   <div>
-    <h3><a href="https://arxiv.org/abs/2412.07144" target="_blank">Political Actor Agent: Simulating Legislative System for Roll Call Votes Prediction with Large Language Models</a></h3>
+    <h3><a href="https://ojs.aaai.org/index.php/AAAI/article/view/32017" target="_blank">Political Actor Agent: Simulating Legislative System for Roll Call Votes Prediction with Large Language Models</a></h3>
     <p><strong>Hao Li</strong>, Ruoyuan Gong, Jiang Hao<br>
     Proceedings of the AAAI conference on artificial intelligence(AAAI), 2025</p>
   </div>
