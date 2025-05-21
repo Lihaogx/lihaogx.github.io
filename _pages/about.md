@@ -158,7 +158,7 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 
-Hello, I am Hao Li, a third-year Ph.D. student at the School of Electronic Information at Wuhan University, under the supervision of Professor [Hao Jiang](http://eis.whu.edu.cn/index/szdwDetail?rsh=00007828&newskind_id=20160320222026165YIdDsQIbgNtoE). My research interests lie in the integration of social networks, graph neural networks, and large language models. 
+Hello, I am Hao Li, a third-year Ph.D. student at the School of Electronic Information at Wuhan University, under the supervision of Professor [Hao Jiang](http://eis.whu.edu.cn/index/szdwDetail?rsh=00007828&newskind_id=20160320222026165YIdDsQIbgNtoE). My research interests lie in the integration of social networks, graph neural networks, and large language models. I also collaborate with [Dr. Yulia Gel](https://gel.stat.vt.edu/) and [Dr. Yuzhou Chen](https://yuzhouguangc.github.io/yuzhou/) on persistent homology for graph learning.
 
 🌟[Email](whulh@whu.edu.cn) / [Github](https://github.com/Lihaogx) / [Google Scholar](https://scholar.google.com/citations?hl=zh-CN&user=xv78JsEAAAAJ)
 
@@ -194,7 +194,7 @@ My research interests lie in the integration of social networks, graph neural ne
 # 📃 Publications 
 
 <div style="display: flex; align-items: center;">
-  <img src="../images/TMetaNet.jpg" alt="TMetaNet" style="width: 350px;">
+  <img src="../images/TMetaNet.png" alt="TMetaNet" style="width: 350px;">
   <div>
     <h3><a href="https://icml.cc/virtual/2025/poster/46188" target="_blank">TMetaNet: Topological Meta-Learning Framework for Dynamic Link Prediction</a></h3>
     <p><strong>Hao Li</strong>, Hao Wan, Yuzhou Chen, Dongsheng Ye, Yulia Gel, Hao Jiang<br>
