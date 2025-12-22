@@ -182,6 +182,7 @@ My research interests lie in the integration of social networks, graph neural ne
 # 🔥 News
 <div style="max-height: 200px; overflow-y: auto;">
   <ul>
+    <li><strong>2025.11:</strong> Our paper "Agentmandering: A Game-Theoretic Framework for Fair Redistricting via Large Language Model Agents." has been accepted by <strong>AAAI AISI 2026</strong>. 🎉 See you in Singapore!</li>
     <li><strong>2025.05:</strong> Our paper "TMetaNet: Topological Meta-Learning Framework for Dynamic Link Prediction." has been accepted by <strong>ICML 2025</strong>. 🎉 See you in Vancouver!</li>
     <li><strong>2025.01:</strong> Our paper "UniGO: A Unified Graph Neural Network for Modeling Opinion Dynamics on Graphs" has been accepted as an oral presentation by <strong>WWW 2025</strong>. 🎉 See you in Sydney!</li>
     <li><strong>2024.12:</strong> Our paper "Political Actor Agent: Simulating Legislative System for Roll Call Votes Prediction with Large Language Models" has been accepted as an oral presentation by <strong>AAAI 2025</strong>. 🎉 See you in Philadelphia!</li>
@@ -194,9 +195,18 @@ My research interests lie in the integration of social networks, graph neural ne
 # 📃 Publications 
 
 <div style="display: flex; align-items: center;">
+  <img src="../images/Agentmandering.png" alt="Agentmandering" style="width: 350px;">
+  <div>
+    <h3><a href="https://arxiv.org/abs/2511.04076" target="_blank">TMetaNet: Topological Meta-Learning Framework for Dynamic Link Prediction</a></h3>
+    <p><strong>Hao Li</strong>, Haotian Chen, Ruoyuan Gong, Juanjuan Wang, Hao Jiang<br>
+    Proceedings of the AAAI conference on artificial intelligence Special Track AI for Social Impact (AAAI AISI), 2026</p>
+  </div>
+</div>
+
+<div style="display: flex; align-items: center;">
   <img src="../images/TMetaNet.png" alt="TMetaNet" style="width: 350px;">
   <div>
-    <h3><a href="https://icml.cc/virtual/2025/poster/46188" target="_blank">TMetaNet: Topological Meta-Learning Framework for Dynamic Link Prediction</a></h3>
+    <h3><a href="https://proceedings.mlr.press/v267/li25ci.html" target="_blank">TMetaNet: Topological Meta-Learning Framework for Dynamic Link Prediction</a></h3>
     <p><strong>Hao Li</strong>, Hao Wan, Yuzhou Chen, Dongsheng Ye, Yulia Gel, Hao Jiang<br>
     International Conference on Machine Learning (ICML), 2025</p>
   </div>
