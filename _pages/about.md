@@ -195,9 +195,9 @@ My research interests lie in the integration of social networks, graph neural ne
 # 📃 Publications 
 
 <div style="display: flex; align-items: center;">
-  <img src="../images/Agentmandering.png" alt="Agentmandering" style="width: 350px;">
+  <img src="../images/Agentmandering.jpg" alt="Agentmandering" style="width: 350px;">
   <div>
-    <h3><a href="https://arxiv.org/abs/2511.04076" target="_blank">TMetaNet: Topological Meta-Learning Framework for Dynamic Link Prediction</a></h3>
+    <h3><a href="https://arxiv.org/abs/2511.04076" target="_blank">Agentmandering: A Game-Theoretic Framework for Fair Redistricting via Large Language Model Agents</a></h3>
     <p><strong>Hao Li</strong>, Haotian Chen, Ruoyuan Gong, Juanjuan Wang, Hao Jiang<br>
     Proceedings of the AAAI conference on artificial intelligence Special Track AI for Social Impact (AAAI AISI), 2026</p>
   </div>
