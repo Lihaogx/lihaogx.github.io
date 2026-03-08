@@ -1,0 +1,875 @@
+{% assign data = site.data.homepage %}
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --ink: #1a1a18;
+  --stone: #6b6b67;
+  --paper: #f7f5f0;
+  --cream: #ede9e1;
+  --line: #e2ddd6;
+  --accent: #8b4a2f;
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-weight: 300;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+a { color: inherit; }
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 64px;
+  height: 58px;
+  background: rgba(247, 245, 240, 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  animation: fadeDown .7s ease both;
+}
+.nav-name {
+  font-family: 'EB Garamond', serif;
+  font-size: 17px;
+  letter-spacing: .4px;
+}
+.nav-links {
+  display: flex;
+  gap: 0;
+}
+.nav-links a {
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  height: 58px;
+  font-size: 12px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--stone);
+  border-left: 1px solid transparent;
+  transition: color .2s, border-color .2s;
+}
+.nav-links a:first-child { border-left: 1px solid var(--line); }
+.nav-links a:hover { color: var(--accent); }
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  align-items: center;
+  padding: 100px 64px 80px;
+  gap: 80px;
+}
+.hero-text { animation: fadeUp 1s .3s ease both; }
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.eyebrow-text {
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+h1.hero-name {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(54px, 6.5vw, 88px);
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+h1.hero-name em {
+  font-style: italic;
+  color: var(--accent);
+}
+.hero-role {
+  font-size: 15px;
+  color: var(--stone);
+  margin-bottom: 6px;
+}
+.hero-affil {
+  font-size: 14px;
+  color: #9a9690;
+  margin-bottom: 40px;
+}
+.hero-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+.btn-primary,
+.btn-ghost {
+  padding: 11px 26px;
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .2s;
+}
+.btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+.btn-primary:hover { background: var(--accent); }
+.btn-ghost {
+  border: 1px solid var(--ink);
+  color: var(--ink);
+}
+.btn-ghost:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+.hero-social {
+  display: flex;
+  gap: 14px 24px;
+  flex-wrap: wrap;
+}
+.hero-social a {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--stone);
+  text-decoration: none;
+  transition: color .2s;
+}
+.hero-social a:hover { color: var(--accent); }
+.hero-portrait {
+  animation: fadeUp 1s .5s ease both;
+  position: relative;
+}
+.portrait-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+.portrait-img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  position: relative;
+}
+.portrait-img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, rgba(255,255,255,.3) 0%, transparent 60%);
+}
+.portrait-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.portrait-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--stone);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.portrait-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+}
+.portrait-shadow {
+  position: absolute;
+  top: 16px;
+  left: -16px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--cream);
+  z-index: -1;
+}
+.portrait-badge {
+  margin-top: 20px;
+  padding: 16px 20px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+}
+.badge-label {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.badge-val {
+  font-size: 13px;
+  color: var(--ink);
+}
+.section {
+  padding: 90px 64px;
+  border-top: 1px solid var(--line);
+}
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  margin-bottom: 52px;
+}
+.section-eyebrow {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.section-title {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 400;
+  line-height: 1.15;
+}
+.section-rule {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.about-text {
+  font-size: 16px;
+  color: var(--stone);
+}
+.about-text p + p { margin-top: 18px; }
+.info-row {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+}
+.info-row:first-child { border-top: 1px solid var(--line); }
+.info-key {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.info-val a {
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+.info-val a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.edu-timeline { margin-top: 48px; }
+.edu-subtitle {
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 24px;
+}
+.edu-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.edu-item:first-of-type { border-top: 1px solid var(--line); }
+.edu-year {
+  font-family: 'EB Garamond', serif;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--stone);
+}
+.edu-deg {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.edu-school {
+  font-size: 13px;
+  color: var(--stone);
+}
+.news-list {
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+.news-item {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.news-date {
+  font-family: 'EB Garamond', serif;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--stone);
+}
+.news-text {
+  font-size: 14px;
+  color: var(--stone);
+}
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+}
+.r-card {
+  background: var(--paper);
+  padding: 36px 28px;
+}
+.r-card:hover { background: var(--cream); }
+.r-num {
+  display: block;
+  margin-bottom: 14px;
+  font-family: 'EB Garamond', serif;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--accent);
+}
+.r-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+.r-desc {
+  font-size: 13px;
+  color: var(--stone);
+}
+.r-tags,
+.pub-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.r-tag,
+.badge {
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border: 1px solid var(--line);
+  color: var(--stone);
+}
+.pub-filter {
+  display: flex;
+  gap: 0;
+  margin-bottom: 40px;
+  border-bottom: 2px solid var(--line);
+}
+.pf-btn {
+  padding: 8px 20px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--stone);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+}
+.pf-btn.active {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+.pub-list { list-style: none; }
+.pub-item {
+  display: grid;
+  grid-template-columns: 130px 56px 1fr auto;
+  gap: 24px;
+  align-items: start;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--line);
+}
+.pub-item:first-child { border-top: 1px solid var(--line); }
+.pub-thumb {
+  width: 130px;
+  aspect-ratio: 4 / 3;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+}
+.pub-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s ease;
+}
+.pub-thumb:hover img { transform: scale(1.04); }
+.pub-thumb-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--stone);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.pub-year {
+  font-family: 'EB Garamond', serif;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--stone);
+  padding-top: 3px;
+}
+.pub-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+.pub-venue {
+  font-size: 13px;
+  color: var(--stone);
+}
+.pub-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+.pub-link {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--stone);
+  border-bottom: 1px solid var(--line);
+}
+.pub-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.pub-item.hidden-item {
+  display: none;
+}
+.pub-actions {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+}
+.pub-more-btn {
+  padding: 10px 22px;
+  border: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .2s;
+}
+.pub-more-btn:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+footer {
+  padding: 36px 64px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-left {
+  font-size: 12px;
+  color: var(--stone);
+}
+.footer-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.footer-links a {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--stone);
+}
+.footer-links a:hover { color: var(--accent); }
+#lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  background: rgba(26,26,24,.88);
+  transition: opacity .25s;
+}
+#lightbox.open {
+  opacity: 1;
+  pointer-events: all;
+}
+#lightbox img {
+  max-width: min(90vw, 900px);
+  max-height: 85vh;
+  object-fit: contain;
+  border: 1px solid rgba(255,255,255,.1);
+}
+#lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,.7);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 900px) {
+  nav { padding: 0 24px; }
+  .nav-links { overflow-x: auto; }
+  .nav-links a { padding: 0 12px; }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 90px 24px 60px;
+  }
+  .hero-portrait { order: -1; }
+  .portrait-wrap { max-width: 240px; }
+  .section { padding: 60px 24px; }
+  .about-grid,
+  .research-grid { grid-template-columns: 1fr; }
+  .pub-item {
+    grid-template-columns: 80px 40px 1fr;
+  }
+  .pub-thumb { width: 80px; }
+  .pub-links { display: none; }
+  footer { padding: 28px 24px; }
+}
+</style>
+
+<nav>
+  <span class="nav-name">{{ site.name }} · Homepage</span>
+  <div class="nav-links">
+    {% for item in data.site.nav %}
+    <a href="{{ item.href }}">{{ item.label }}</a>
+    {% endfor %}
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">
+      <div class="eyebrow-dot"></div>
+      <span class="eyebrow-text">{{ data.hero.eyebrow }}</span>
+    </div>
+    <h1 class="hero-name">{{ data.hero.first_name }}<br><em>{{ data.hero.last_name }}</em></h1>
+    <p class="hero-role">{{ data.hero.role_cn }}</p>
+    <p class="hero-affil">{{ data.hero.role_en }}</p>
+    <div class="hero-links">
+      {% for button in data.hero.buttons %}
+      <a href="{{ button.href }}" class="{% if button.style == 'primary' %}btn-primary{% else %}btn-ghost{% endif %}">{{ button.label }}</a>
+      {% endfor %}
+    </div>
+    <div class="hero-social">
+      {% for social in data.hero.socials %}
+      <a href="{{ social.href }}">{{ social.label }}</a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="hero-portrait">
+    <div class="portrait-wrap">
+      <div class="portrait-img">
+        {% if data.hero.photo %}
+        <img src="{{ data.hero.photo | relative_url }}" alt="{{ data.hero.photo_alt }}">
+        {% else %}
+        <div class="portrait-fallback">Portrait</div>
+        {% endif %}
+        <div class="portrait-bar"></div>
+      </div>
+      <div class="portrait-shadow"></div>
+      <div class="portrait-badge">
+        {% for stat in data.hero.stats %}
+        <div>
+          <span class="badge-label">{{ stat.label }}</span>
+          <span class="badge-val">{{ stat.value }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="section-header">
+    <span class="section-eyebrow">About</span>
+    <h2 class="section-title">{{ data.about.title }}</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="about-grid">
+    <div>
+      <div class="about-text">
+        {% for paragraph in data.about.paragraphs %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
+      </div>
+      <div class="edu-timeline">
+        <div class="edu-subtitle">{{ data.about.education.title }}</div>
+        {% for edu in data.about.education.items %}
+        <div class="edu-item">
+          <span class="edu-year">{{ edu.years }}</span>
+          <div>
+            <div class="edu-deg">{{ edu.degree }}</div>
+            <div class="edu-school">{{ edu.school }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div>
+      {% for row in data.about.info %}
+      <div class="info-row">
+        <span class="info-key">{{ row.label }}</span>
+        <span class="info-val">
+          {% if row.href %}
+          <a href="{{ row.href }}">{{ row.value }}</a>
+          {% else %}
+          {{ row.value }}
+          {% endif %}
+        </span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="news">
+  <div class="section-header">
+    <span class="section-eyebrow">News</span>
+    <h2 class="section-title">{{ data.news.title }}</h2>
+    <div class="section-rule"></div>
+  </div>
+  <ul class="news-list">
+    {% for item in data.news.items %}
+    <li class="news-item">
+      <span class="news-date">{{ item.date }}</span>
+      <span class="news-text">{{ item.text }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="section" id="research">
+  <div class="section-header">
+    <span class="section-eyebrow">Research</span>
+    <h2 class="section-title">{{ data.research.title }}</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="research-grid">
+    {% for item in data.research.items %}
+    <div class="r-card">
+      <span class="r-num">{{ item.number }}</span>
+      <div class="r-title">{{ item.title }}</div>
+      <p class="r-desc">{{ item.description }}</p>
+      <div class="r-tags">
+        {% for tag in item.tags %}
+        <span class="r-tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section" id="publications">
+  <div class="section-header">
+    <span class="section-eyebrow">Publications</span>
+    <h2 class="section-title">{{ data.publications.title }}</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="pub-filter">
+    {% for filter in data.publications.filters %}
+    <button class="pf-btn{% if forloop.first %} active{% endif %}" type="button" data-filter="{{ filter.key }}">{{ filter.label }}</button>
+    {% endfor %}
+  </div>
+
+  <ul class="pub-list">
+    {% for pub in data.publications.items %}
+    <li class="pub-item{% if forloop.index > data.publications.initial_visible %} hidden-item{% endif %}" data-cat="{{ pub.category }}">
+      {% if pub.image %}
+      <a class="pub-thumb" href="{{ pub.image | relative_url }}" data-lightbox="{{ pub.title | escape }}">
+        <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }}">
+      </a>
+      {% else %}
+      <div class="pub-thumb">
+        <div class="pub-thumb-fallback">No Image</div>
+      </div>
+      {% endif %}
+      <span class="pub-year">{{ pub.year }}</span>
+      <div>
+        <p class="pub-title">{{ pub.title }}</p>
+        <p class="pub-venue">{{ pub.venue }}</p>
+        <div class="pub-badges">
+          {% for tag in pub.tags %}
+          <span class="badge">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="pub-links">
+        {% for link in pub.links %}
+        <a class="pub-link" href="{{ link.href }}">{{ link.label }}</a>
+        {% endfor %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% if data.publications.items.size > data.publications.initial_visible %}
+  <div class="pub-actions">
+    <button id="publications-more" class="pub-more-btn" type="button" data-visible-count="{{ data.publications.initial_visible }}" data-more-label="{{ data.publications.more_label }}" data-less-label="{{ data.publications.less_label }}">{{ data.publications.more_label }}</button>
+  </div>
+  {% endif %}
+</section>
+
+<footer>
+  <span class="footer-left">{{ data.footer.text }}</span>
+  <div class="footer-links">
+    {% for link in data.footer.links %}
+    <a href="{{ link.href }}">{{ link.label }}</a>
+    {% endfor %}
+  </div>
+</footer>
+
+<div id="lightbox" aria-hidden="true">
+  <button id="lightbox-close" type="button">Close</button>
+  <img src="" alt="">
+</div>
+
+<script>
+  const filterButtons = document.querySelectorAll('.pf-btn');
+  const pubItems = document.querySelectorAll('.pub-item');
+  const moreButton = document.getElementById('publications-more');
+
+  function applyPublicationVisibility(category) {
+    const activeCategory = category || document.querySelector('.pf-btn.active')?.dataset.filter || 'all';
+    const expanded = moreButton ? moreButton.dataset.expanded === 'true' : false;
+    let matchedIndex = 0;
+
+    pubItems.forEach((item) => {
+      const matches = activeCategory === 'all' || item.dataset.cat === activeCategory;
+      if (!matches) {
+        item.classList.add('hidden-item');
+        item.style.display = 'none';
+        return;
+      }
+
+      matchedIndex += 1;
+      const shouldShow = expanded || matchedIndex <= Number(moreButton?.dataset.visibleCount || pubItems.length);
+      item.classList.toggle('hidden-item', !shouldShow);
+      item.style.display = shouldShow ? '' : 'none';
+    });
+
+    if (moreButton) {
+      const hasMore = matchedIndex > Number(moreButton.dataset.visibleCount);
+      moreButton.style.display = hasMore ? '' : 'none';
+      moreButton.textContent = expanded ? moreButton.dataset.lessLabel : moreButton.dataset.moreLabel;
+    }
+  }
+
+  filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      filterButtons.forEach((item) => item.classList.remove('active'));
+      button.classList.add('active');
+      if (moreButton) {
+        moreButton.dataset.expanded = 'false';
+      }
+      applyPublicationVisibility(button.dataset.filter);
+    });
+  });
+
+  if (moreButton) {
+    moreButton.dataset.expanded = 'false';
+    moreButton.addEventListener('click', () => {
+      moreButton.dataset.expanded = moreButton.dataset.expanded === 'true' ? 'false' : 'true';
+      applyPublicationVisibility();
+    });
+  }
+
+  applyPublicationVisibility();
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = lightbox.querySelector('img');
+  const lightboxClose = document.getElementById('lightbox-close');
+
+  document.querySelectorAll('[data-lightbox]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      lightboxImage.src = link.getAttribute('href');
+      lightboxImage.alt = link.dataset.lightbox;
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    lightboxImage.src = '';
+    lightboxImage.alt = '';
+  }
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+</script>
