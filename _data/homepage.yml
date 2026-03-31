@@ -82,8 +82,8 @@ about:
 news:
   title: "最新动态"
   items:
-    - date: "2025.11"
-      text: "'Agentmandering' was accepted to AAAI AISI 2026."
+    - date: "2026"
+      text: "'Agentmandering' was published in the Proceedings of the AAAI Conference on Artificial Intelligence."
     - date: "2025.05"
       text: "'TMetaNet' was accepted to ICML 2025."
     - date: "2025.01"
@@ -136,13 +136,13 @@ publications:
     - year: "2026"
       category: "llm"
       title: "Agentmandering: A Game-Theoretic Framework for Fair Redistricting via Large Language Model Agents"
-      venue: "AAAI Conference on Artificial Intelligence, Special Track AI for Social Impact (AAAI AISI 2026)"
+      venue: "Proceedings of the AAAI Conference on Artificial Intelligence, 40(45): 38862-38870, 2026"
       tags:
         - "LLM"
         - "Social Impact"
       links:
         - label: "PDF"
-          href: "https://arxiv.org/abs/2511.04076"
+          href: "https://ojs.aaai.org/index.php/AAAI/article/view/41231"
       image: "/images/Agentmandering.jpg"
     - year: "2025"
       category: "topology"
