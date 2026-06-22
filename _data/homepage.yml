@@ -83,6 +83,8 @@ news:
   title: "最新动态"
   items:
     - date: "2026"
+      text: "'Large Language Models as Topological Thinkers' was accepted to ICML 2026."
+    - date: "2026"
       text: "'Agentmandering' was published in the Proceedings of the AAAI Conference on Artificial Intelligence."
     - date: "2025.05"
       text: "'TMetaNet' was accepted to ICML 2025."
@@ -133,6 +135,28 @@ publications:
     - label: "LLM"
       key: "llm"
   items:
+    - year: "2026"
+      category: "llm"
+      title: "Large Language Models as Topological Thinkers: A Benchmark on Graph Persistent Homology"
+      venue: "International Conference on Machine Learning (ICML 2026)"
+      tags:
+        - "LLM"
+        - "Persistent Homology"
+      links:
+        - label: "Paper"
+          href: "https://icml.cc/virtual/2026/poster/63640"
+      image: "/images/LLM4PH.jpg"
+    - year: "2026"
+      category: "topology"
+      title: "TDiscNet: Topological discrepancy-guided adaptive semantic modeling for dynamic text-attributed graphs"
+      venue: "Knowledge-Based Systems, 2026"
+      tags:
+        - "Topology"
+        - "Dynamic Graphs"
+      links:
+        - label: "Paper"
+          href: "https://www.sciencedirect.com/science/article/pii/S0950705126010890"
+      image: "/images/TDiscNet.jpg"
     - year: "2026"
       category: "llm"
       title: "Agentmandering: A Game-Theoretic Framework for Fair Redistricting via Large Language Model Agents"
