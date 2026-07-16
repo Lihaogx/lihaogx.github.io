@@ -13,8 +13,7 @@
 1. 打开 `/_data/homepage.yml`
 2. 修改你要更新的文字、链接、论文或新闻
 3. 如果有新图片，把图片放进 `/images/`
-4. 如果有新 CV，把文件替换成 `/files/CV_en.pdf`
-5. 运行本地预览：
+4. 运行本地预览：
 
 ```bash
 ./scripts/preview-local.sh
@@ -53,30 +52,21 @@ hero:
   socials:
 ```
 
-和：
+把对应的 `href` 改掉即可。
 
-```yml
-about:
-  info:
-```
-
-把对应的 `href` 或 `value` 改掉即可。
-
-### 2.1 改首页最上方那一行身份信息
+### 2.1 改首页姓名和单位信息
 
 找到：
 
 ```yml
 hero:
-  eyebrow: "..."
-  role_cn: "..."
+  name: "Li Hao"
   role_en: "..."
 ```
 
-这 3 个字段分别控制：
+这 2 个字段分别控制：
 
-- `eyebrow`：姓名上方的小字
-- `role_cn`：中文单位行
+- `name`：首页显示的姓名
 - `role_en`：英文单位行
 
 ### 3. 新增一条新闻
@@ -93,6 +83,31 @@ news:
 ```yml
     - date: "2026.03"
       text: "你的新消息写在这里。"
+```
+
+如果新消息属于一个此前没有出现过的年份，也要在 `news.years` 最上方加上该年份，例如：
+
+```yml
+news:
+  years:
+    - "2027"
+    - "2026"
+```
+
+### 3.1 修改研究方向
+
+找到：
+
+```yml
+research:
+  items:
+```
+
+每个研究方向由一个标题和一段说明组成：
+
+```yml
+    - title: "Research topic"
+      description: "A concise description of this research direction."
 ```
 
 ### 4. 新增一篇论文
@@ -120,7 +135,7 @@ publications:
       image: "/images/你的图片文件名.jpg"
 ```
 
-默认首页先显示前 4 篇论文，点击 `More` 会展开全部。
+默认首页先显示前 4 篇论文，点击 `More` 会展开全部。论文栏目只保留顶会论文；每篇论文需要一张配图。你不需要填写 `category` 或 `tags`。
 
 如果你以后想改默认显示数量，修改：
 
@@ -143,31 +158,21 @@ publications:
 
 - `/images/`
 
-然后在 `/_data/homepage.yml` 里把路径改成：
+然后在 `/_data/homepage.yml` 里填写对应路径。头像使用 `hero.photo`：
 
 - `/images/xxx.jpg`
 
 例如：
 
 ```yml
-photo: "/images/profile.jpg"
+hero:
+  photo: "/images/profile.jpg"
 ```
 
-## CV 文件
-
-当前首页下载按钮使用的是：
-
-```text
-/files/CV_en.pdf
-```
-
-如果以后你想换新的英文 CV，直接把新文件替换成同名文件即可。
-
-如果你想换成别的文件名，也可以改：
+论文配图使用每篇论文中的 `image`：
 
 ```yml
-cv:
-  file: "/files/CV_en.pdf"
+image: "/images/your-paper-figure.jpg"
 ```
 
 ## 哪些内容已经被隐藏

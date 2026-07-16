@@ -1,875 +1,351 @@
 {% assign data = site.data.homepage %}
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --ink: #1a1a18;
-  --stone: #6b6b67;
-  --paper: #f7f5f0;
-  --cream: #ede9e1;
-  --line: #e2ddd6;
-  --accent: #8b4a2f;
-}
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--paper);
-  color: var(--ink);
-  font-weight: 300;
-  line-height: 1.75;
-  overflow-x: hidden;
-}
-a { color: inherit; }
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 200;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 64px;
-  height: 58px;
-  background: rgba(247, 245, 240, 0.94);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
-  animation: fadeDown .7s ease both;
-}
-.nav-name {
-  font-family: 'EB Garamond', serif;
-  font-size: 17px;
-  letter-spacing: .4px;
-}
-.nav-links {
-  display: flex;
-  gap: 0;
-}
-.nav-links a {
-  display: flex;
-  align-items: center;
-  padding: 0 18px;
-  height: 58px;
-  font-size: 12px;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--stone);
-  border-left: 1px solid transparent;
-  transition: color .2s, border-color .2s;
-}
-.nav-links a:first-child { border-left: 1px solid var(--line); }
-.nav-links a:hover { color: var(--accent); }
-.hero {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  align-items: center;
-  padding: 100px 64px 80px;
-  gap: 80px;
-}
-.hero-text { animation: fadeUp 1s .3s ease both; }
-.hero-eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 28px;
-}
-.eyebrow-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent);
-}
-.eyebrow-text {
-  font-size: 12px;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-h1.hero-name {
-  font-family: 'EB Garamond', serif;
-  font-size: clamp(54px, 6.5vw, 88px);
-  font-weight: 400;
-  line-height: 1;
-  margin-bottom: 20px;
-  letter-spacing: -1px;
-}
-h1.hero-name em {
-  font-style: italic;
-  color: var(--accent);
-}
-.hero-role {
-  font-size: 15px;
-  color: var(--stone);
-  margin-bottom: 6px;
-}
-.hero-affil {
-  font-size: 14px;
-  color: #9a9690;
-  margin-bottom: 40px;
-}
-.hero-links {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 48px;
-}
-.btn-primary,
-.btn-ghost {
-  padding: 11px 26px;
-  font-size: 11px;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all .2s;
-}
-.btn-primary {
-  background: var(--ink);
-  color: var(--paper);
-}
-.btn-primary:hover { background: var(--accent); }
-.btn-ghost {
-  border: 1px solid var(--ink);
-  color: var(--ink);
-}
-.btn-ghost:hover {
-  background: var(--ink);
-  color: var(--paper);
-}
-.hero-social {
-  display: flex;
-  gap: 14px 24px;
-  flex-wrap: wrap;
-}
-.hero-social a {
-  font-size: 12px;
-  letter-spacing: 1px;
-  color: var(--stone);
-  text-decoration: none;
-  transition: color .2s;
-}
-.hero-social a:hover { color: var(--accent); }
-.hero-portrait {
-  animation: fadeUp 1s .5s ease both;
-  position: relative;
-}
-.portrait-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 360px;
-  margin: 0 auto;
-}
-.portrait-img {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  background: var(--cream);
-  border: 1px solid var(--line);
-  overflow: hidden;
-  position: relative;
-}
-.portrait-img::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(145deg, rgba(255,255,255,.3) 0%, transparent 60%);
-}
-.portrait-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.portrait-fallback {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--stone);
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-.portrait-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--accent);
-}
-.portrait-shadow {
-  position: absolute;
-  top: 16px;
-  left: -16px;
-  width: 100%;
-  height: 100%;
-  border: 1px solid var(--cream);
-  z-index: -1;
-}
-.portrait-badge {
-  margin-top: 20px;
-  padding: 16px 20px;
-  background: var(--cream);
-  border: 1px solid var(--line);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px 24px;
-}
-.badge-label {
-  display: block;
-  margin-bottom: 2px;
-  font-size: 9px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-.badge-val {
-  font-size: 13px;
-  color: var(--ink);
-}
-.section {
-  padding: 90px 64px;
-  border-top: 1px solid var(--line);
-}
-.section-header {
-  display: flex;
-  align-items: baseline;
-  gap: 18px;
-  margin-bottom: 52px;
-}
-.section-eyebrow {
-  font-size: 10px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--accent);
-  white-space: nowrap;
-}
-.section-title {
-  font-family: 'EB Garamond', serif;
-  font-size: clamp(28px, 3vw, 40px);
-  font-weight: 400;
-  line-height: 1.15;
-}
-.section-rule {
-  flex: 1;
-  height: 1px;
-  background: var(--line);
-}
-.about-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 64px;
-  align-items: start;
-}
-.about-text {
-  font-size: 16px;
-  color: var(--stone);
-}
-.about-text p + p { margin-top: 18px; }
-.info-row {
-  padding: 14px 0;
-  border-bottom: 1px solid var(--line);
-  font-size: 13px;
-}
-.info-row:first-child { border-top: 1px solid var(--line); }
-.info-key {
-  display: block;
-  margin-bottom: 3px;
-  font-size: 9px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-.info-val a {
-  text-decoration: none;
-  border-bottom: 1px solid var(--line);
-}
-.info-val a:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-}
-.edu-timeline { margin-top: 48px; }
-.edu-subtitle {
-  font-size: 10px;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--stone);
-  margin-bottom: 24px;
-}
-.edu-item {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 20px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--line);
-}
-.edu-item:first-of-type { border-top: 1px solid var(--line); }
-.edu-year {
-  font-family: 'EB Garamond', serif;
-  font-size: 14px;
-  font-style: italic;
-  color: var(--stone);
-}
-.edu-deg {
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 2px;
-}
-.edu-school {
-  font-size: 13px;
-  color: var(--stone);
-}
-.news-list {
-  list-style: none;
-  border-top: 1px solid var(--line);
-}
-.news-item {
-  display: grid;
-  grid-template-columns: 90px 1fr;
-  gap: 20px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--line);
-}
-.news-date {
-  font-family: 'EB Garamond', serif;
-  font-size: 14px;
-  font-style: italic;
-  color: var(--stone);
-}
-.news-text {
-  font-size: 14px;
-  color: var(--stone);
-}
-.research-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--line);
-}
-.r-card {
-  background: var(--paper);
-  padding: 36px 28px;
-}
-.r-card:hover { background: var(--cream); }
-.r-num {
-  display: block;
-  margin-bottom: 14px;
-  font-family: 'EB Garamond', serif;
-  font-size: 13px;
-  font-style: italic;
-  color: var(--accent);
-}
-.r-title {
-  font-family: 'EB Garamond', serif;
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 12px;
-  line-height: 1.3;
-}
-.r-desc {
-  font-size: 13px;
-  color: var(--stone);
-}
-.r-tags,
-.pub-badges {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-top: 16px;
-}
-.r-tag,
-.badge {
-  font-size: 9px;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  padding: 3px 9px;
-  border: 1px solid var(--line);
-  color: var(--stone);
-}
-.pub-filter {
-  display: flex;
-  gap: 0;
-  margin-bottom: 40px;
-  border-bottom: 2px solid var(--line);
-}
-.pf-btn {
-  padding: 8px 20px;
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--stone);
-  background: none;
-  border: none;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -2px;
-  cursor: pointer;
-}
-.pf-btn.active {
-  color: var(--ink);
-  border-bottom-color: var(--accent);
-}
-.pub-list { list-style: none; }
-.pub-item {
-  display: grid;
-  grid-template-columns: 130px 56px 1fr auto;
-  gap: 24px;
-  align-items: start;
-  padding: 32px 0;
-  border-bottom: 1px solid var(--line);
-}
-.pub-item:first-child { border-top: 1px solid var(--line); }
-.pub-thumb {
-  width: 130px;
-  aspect-ratio: 4 / 3;
-  background: var(--cream);
-  border: 1px solid var(--line);
-  overflow: hidden;
-  display: block;
-  text-decoration: none;
-}
-.pub-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform .3s ease;
-}
-.pub-thumb:hover img { transform: scale(1.04); }
-.pub-thumb-fallback {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--stone);
-  font-size: 10px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-.pub-year {
-  font-family: 'EB Garamond', serif;
-  font-size: 14px;
-  font-style: italic;
-  color: var(--stone);
-  padding-top: 3px;
-}
-.pub-title {
-  font-family: 'EB Garamond', serif;
-  font-size: 19px;
-  font-weight: 500;
-  line-height: 1.4;
-  margin-bottom: 6px;
-}
-.pub-venue {
-  font-size: 13px;
-  color: var(--stone);
-}
-.pub-links {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: flex-end;
-}
-.pub-link {
-  font-size: 11px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--stone);
-  border-bottom: 1px solid var(--line);
-}
-.pub-link:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-}
-.pub-item.hidden-item {
-  display: none;
-}
-.pub-actions {
-  margin-top: 28px;
-  display: flex;
-  justify-content: center;
-}
-.pub-more-btn {
-  padding: 10px 22px;
-  border: 1px solid var(--ink);
-  background: transparent;
-  color: var(--ink);
-  font-size: 11px;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all .2s;
-}
-.pub-more-btn:hover {
-  background: var(--ink);
-  color: var(--paper);
-}
-footer {
-  padding: 36px 64px;
-  border-top: 1px solid var(--line);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-.footer-left {
-  font-size: 12px;
-  color: var(--stone);
-}
-.footer-links {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-.footer-links a {
-  font-size: 11px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--stone);
-}
-.footer-links a:hover { color: var(--accent); }
-#lightbox {
-  position: fixed;
-  inset: 0;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  background: rgba(26,26,24,.88);
-  transition: opacity .25s;
-}
-#lightbox.open {
-  opacity: 1;
-  pointer-events: all;
-}
-#lightbox img {
-  max-width: min(90vw, 900px);
-  max-height: 85vh;
-  object-fit: contain;
-  border: 1px solid rgba(255,255,255,.1);
-}
-#lightbox-close {
-  position: absolute;
-  top: 24px;
-  right: 32px;
-  background: none;
-  border: none;
-  color: rgba(255,255,255,.7);
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(22px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeDown {
-  from { opacity: 0; transform: translateY(-14px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@media (max-width: 900px) {
-  nav { padding: 0 24px; }
-  .nav-links { overflow-x: auto; }
-  .nav-links a { padding: 0 12px; }
-  .hero {
-    grid-template-columns: 1fr;
-    padding: 90px 24px 60px;
+  :root {
+    --ink: #222222;
+    --muted: #656565;
+    --link: #1d5d91;
+    --line: #dddddd;
+    --paper: #ffffff;
   }
-  .hero-portrait { order: -1; }
-  .portrait-wrap { max-width: 240px; }
-  .section { padding: 60px 24px; }
-  .about-grid,
-  .research-grid { grid-template-columns: 1fr; }
-  .pub-item {
-    grid-template-columns: 80px 40px 1fr;
+  @font-face {
+    font-family: 'Font Awesome 5 Brands';
+    src: url('{{ '/assets/webfonts/fa-brands-400.woff2' | relative_url }}') format('woff2');
   }
-  .pub-thumb { width: 80px; }
-  .pub-links { display: none; }
-  footer { padding: 28px 24px; }
-}
+  @font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    src: url('{{ '/assets/webfonts/fa-solid-900.woff2' | relative_url }}') format('woff2');
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  a { color: var(--link); }
+  .site {
+    width: min(100% - 40px, 920px);
+    margin: 0 auto;
+    padding: 36px 0 48px;
+  }
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  .site-name {
+    color: var(--ink);
+    font-size: 25px;
+    font-weight: normal;
+    text-decoration: none;
+  }
+  .site-nav {
+    display: flex;
+    gap: 18px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+  .site-nav a { text-decoration: none; }
+  .site-nav a:hover { text-decoration: underline; }
+  .intro {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 30px;
+    padding: 38px 0 30px;
+    align-items: start;
+  }
+  .portrait {
+    width: 160px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+  }
+  .intro h1 {
+    margin: 0 0 5px;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 1.2;
+  }
+  .intro-role { margin: 0; color: var(--muted); }
+  .intro-role + .intro-role { margin-top: 1px; }
+  .intro-bio { margin: 18px 0 14px; }
+  .intro-bio p { margin: 0 0 10px; }
+  .intro-bio p:last-child { margin-bottom: 0; }
+  .contact-links {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .contact-link {
+    color: var(--muted);
+    font-size: 20px;
+    line-height: 1;
+    text-decoration: none;
+  }
+  .contact-link:hover { color: var(--link); }
+  .contact-icon { display: block; }
+  .contact-github .contact-icon { font-family: 'Font Awesome 5 Brands'; }
+  .contact-github .contact-icon::before { content: '\f09b'; }
+  .contact-email .contact-icon { font-family: 'Font Awesome 5 Free'; font-weight: 900; }
+  .contact-email .contact-icon::before { content: '\f0e0'; }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .section { padding-top: 25px; }
+  .section h2 {
+    margin: 0 0 12px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--line);
+    font-size: 22px;
+    font-weight: normal;
+  }
+  .news-list, .publication-list {
+    margin: 0;
+    padding-left: 22px;
+  }
+  .news-list li { margin: 7px 0; }
+  .news-date { color: var(--muted); }
+  .news-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  .news-tab {
+    margin-bottom: -1px;
+    padding: 7px 25px;
+    border: 1px solid var(--line);
+    border-bottom: 0;
+    border-radius: 4px 4px 0 0;
+    background: var(--paper);
+    color: var(--muted);
+    cursor: pointer;
+    font: 13px Arial, sans-serif;
+  }
+  .news-tab.active {
+    border-bottom: 1px solid var(--paper);
+    color: var(--ink);
+    font-weight: bold;
+  }
+  .news-item.hidden-item { display: none; }
+  .research-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .research-item { padding: 3px 0 18px; }
+  .research-item:last-child { padding-bottom: 0; }
+  .research-title {
+    margin: 0 0 5px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .research-description { margin: 0; }
+  .publication-list { padding-left: 0; list-style: none; }
+  .publication {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 18px;
+    margin: 0;
+    padding: 14px 0;
+    border-bottom: 1px solid #eeeeee;
+  }
+  .publication-image {
+    width: 120px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 1px solid var(--line);
+    display: block;
+  }
+  .publication-title { font-weight: bold; }
+  .publication-venue { color: var(--muted); }
+  .publication-links {
+    margin-left: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  .publication-links a + a::before {
+    content: '/';
+    color: var(--muted);
+    margin: 0 6px;
+  }
+  .publication.hidden-item { display: none; }
+  .pub-actions { margin-top: 16px; }
+  .pub-more-btn {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--link);
+    cursor: pointer;
+    font: inherit;
+    text-decoration: underline;
+  }
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+  }
+  @media (max-width: 620px) {
+    .site { width: min(100% - 32px, 920px); padding-top: 24px; }
+    .site-header { display: block; }
+    .site-nav { margin-top: 10px; gap: 14px; overflow-x: auto; }
+    .intro { grid-template-columns: 96px 1fr; gap: 18px; padding-top: 28px; }
+    .portrait { width: 96px; }
+    .intro h1 { font-size: 26px; }
+    .intro-bio { grid-column: 1 / -1; margin: 0; }
+    .contact-links { grid-column: 1 / -1; }
+    .news-tab { padding: 7px 18px; }
+    .publication { grid-template-columns: 84px minmax(0, 1fr); gap: 14px; }
+    .publication-image { width: 84px; }
+  }
 </style>
 
-<nav>
-  <span class="nav-name">{{ site.name }} · Homepage</span>
-  <div class="nav-links">
-    {% for item in data.site.nav %}
-    <a href="{{ item.href }}">{{ item.label }}</a>
-    {% endfor %}
-  </div>
-</nav>
-
-<section class="hero">
-  <div class="hero-text">
-    <div class="hero-eyebrow">
-      <div class="eyebrow-dot"></div>
-      <span class="eyebrow-text">{{ data.hero.eyebrow }}</span>
-    </div>
-    <h1 class="hero-name">{{ data.hero.first_name }}<br><em>{{ data.hero.last_name }}</em></h1>
-    <p class="hero-role">{{ data.hero.role_cn }}</p>
-    <p class="hero-affil">{{ data.hero.role_en }}</p>
-    <div class="hero-links">
-      {% for button in data.hero.buttons %}
-      <a href="{{ button.href }}" class="{% if button.style == 'primary' %}btn-primary{% else %}btn-ghost{% endif %}">{{ button.label }}</a>
+<main class="site">
+  <header class="site-header">
+    <a class="site-name" href="{{ '/' | relative_url }}">{{ site.name }}</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      {% for item in data.site.nav %}
+      <a href="{{ item.href }}">{{ item.label }}</a>
       {% endfor %}
-    </div>
-    <div class="hero-social">
-      {% for social in data.hero.socials %}
-      <a href="{{ social.href }}">{{ social.label }}</a>
-      {% endfor %}
-    </div>
-  </div>
+    </nav>
+  </header>
 
-  <div class="hero-portrait">
-    <div class="portrait-wrap">
-      <div class="portrait-img">
-        {% if data.hero.photo %}
-        <img src="{{ data.hero.photo | relative_url }}" alt="{{ data.hero.photo_alt }}">
-        {% else %}
-        <div class="portrait-fallback">Portrait</div>
-        {% endif %}
-        <div class="portrait-bar"></div>
-      </div>
-      <div class="portrait-shadow"></div>
-      <div class="portrait-badge">
-        {% for stat in data.hero.stats %}
-        <div>
-          <span class="badge-label">{{ stat.label }}</span>
-          <span class="badge-val">{{ stat.value }}</span>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="about">
-  <div class="section-header">
-    <span class="section-eyebrow">About</span>
-    <h2 class="section-title">{{ data.about.title }}</h2>
-    <div class="section-rule"></div>
-  </div>
-  <div class="about-grid">
+  <section class="intro" id="about">
+    {% if data.hero.photo %}
+    <img class="portrait" src="{{ data.hero.photo | relative_url }}" alt="{{ data.hero.photo_alt }}">
+    {% endif %}
     <div>
-      <div class="about-text">
+      <h1>{{ data.hero.name }}</h1>
+      <p class="intro-role">{{ data.hero.role_en }}</p>
+      <div class="intro-bio">
         {% for paragraph in data.about.paragraphs %}
         <p>{{ paragraph }}</p>
         {% endfor %}
       </div>
-      <div class="edu-timeline">
-        <div class="edu-subtitle">{{ data.about.education.title }}</div>
-        {% for edu in data.about.education.items %}
-        <div class="edu-item">
-          <span class="edu-year">{{ edu.years }}</span>
-          <div>
-            <div class="edu-deg">{{ edu.degree }}</div>
-            <div class="edu-school">{{ edu.school }}</div>
-          </div>
-        </div>
+      <div class="contact-links">
+        {% for social in data.hero.socials %}
+        <a class="contact-link contact-{{ social.icon }}" href="{{ social.href }}" aria-label="{{ social.label }}" title="{{ social.label }}">
+          {% if social.icon == 'scholar' %}
+          <i class="ai ai-google-scholar contact-icon" aria-hidden="true"></i>
+          {% else %}
+          <span class="contact-icon" aria-hidden="true"></span>
+          {% endif %}
+          <span class="sr-only">{{ social.label }}</span>
+        </a>
         {% endfor %}
       </div>
     </div>
-    <div>
-      {% for row in data.about.info %}
-      <div class="info-row">
-        <span class="info-key">{{ row.label }}</span>
-        <span class="info-val">
-          {% if row.href %}
-          <a href="{{ row.href }}">{{ row.value }}</a>
-          {% else %}
-          {{ row.value }}
-          {% endif %}
-        </span>
-      </div>
+  </section>
+
+  <section class="section" id="news">
+    <h2>{{ data.news.title }}</h2>
+    <div class="news-tabs" role="tablist" aria-label="News by year">
+      {% for year in data.news.years %}
+      <button class="news-tab{% if forloop.first %} active{% endif %}" type="button" data-year="{{ year }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">{{ year }}</button>
       {% endfor %}
     </div>
-  </div>
-</section>
+    <ul class="news-list">
+      {% for item in data.news.items %}
+      <li class="news-item" data-year="{{ item.date | slice: 0, 4 }}"><span class="news-date">{{ item.date }}.</span> {{ item.text }}</li>
+      {% endfor %}
+    </ul>
+  </section>
 
-<section class="section" id="news">
-  <div class="section-header">
-    <span class="section-eyebrow">News</span>
-    <h2 class="section-title">{{ data.news.title }}</h2>
-    <div class="section-rule"></div>
-  </div>
-  <ul class="news-list">
-    {% for item in data.news.items %}
-    <li class="news-item">
-      <span class="news-date">{{ item.date }}</span>
-      <span class="news-text">{{ item.text }}</span>
-    </li>
-    {% endfor %}
-  </ul>
-</section>
+  <section class="section" id="research">
+    <h2>{{ data.research.title }}</h2>
+    <ul class="research-list">
+      {% for item in data.research.items %}
+      <li class="research-item">
+        <h3 class="research-title">{{ item.title }}</h3>
+        <p class="research-description">{{ item.description }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
 
-<section class="section" id="research">
-  <div class="section-header">
-    <span class="section-eyebrow">Research</span>
-    <h2 class="section-title">{{ data.research.title }}</h2>
-    <div class="section-rule"></div>
-  </div>
-  <div class="research-grid">
-    {% for item in data.research.items %}
-    <div class="r-card">
-      <span class="r-num">{{ item.number }}</span>
-      <div class="r-title">{{ item.title }}</div>
-      <p class="r-desc">{{ item.description }}</p>
-      <div class="r-tags">
-        {% for tag in item.tags %}
-        <span class="r-tag">{{ tag }}</span>
-        {% endfor %}
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-
-<section class="section" id="publications">
-  <div class="section-header">
-    <span class="section-eyebrow">Publications</span>
-    <h2 class="section-title">{{ data.publications.title }}</h2>
-    <div class="section-rule"></div>
-  </div>
-  <div class="pub-filter">
-    {% for filter in data.publications.filters %}
-    <button class="pf-btn{% if forloop.first %} active{% endif %}" type="button" data-filter="{{ filter.key }}">{{ filter.label }}</button>
-    {% endfor %}
-  </div>
-
-  <ul class="pub-list">
-    {% for pub in data.publications.items %}
-    <li class="pub-item{% if forloop.index > data.publications.initial_visible %} hidden-item{% endif %}" data-cat="{{ pub.category }}">
-      {% if pub.image %}
-      <a class="pub-thumb" href="{{ pub.image | relative_url }}" data-lightbox="{{ pub.title | escape }}">
-        <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }}">
-      </a>
-      {% else %}
-      <div class="pub-thumb">
-        <div class="pub-thumb-fallback">No Image</div>
-      </div>
-      {% endif %}
-      <span class="pub-year">{{ pub.year }}</span>
-      <div>
-        <p class="pub-title">{{ pub.title }}</p>
-        <p class="pub-venue">{{ pub.venue }}</p>
-        <div class="pub-badges">
-          {% for tag in pub.tags %}
-          <span class="badge">{{ tag }}</span>
-          {% endfor %}
+  <section class="section" id="publications">
+    <h2>{{ data.publications.title }}</h2>
+    <ol class="publication-list">
+      {% for pub in data.publications.items %}
+      <li class="publication{% if forloop.index > data.publications.initial_visible %} extra-item hidden-item{% endif %}">
+        <img class="publication-image" src="{{ pub.image | relative_url }}" alt="Figure from {{ pub.title }}">
+        <div>
+          <span class="publication-title">{{ pub.title }}</span>.
+          <span class="publication-venue">{{ pub.venue }}</span>
+          {% if pub.links.size > 0 %}
+          <span class="publication-links">
+            {% for link in pub.links %}
+            <a href="{{ link.href }}">{{ link.label }}</a>
+            {% endfor %}
+          </span>
+          {% endif %}
         </div>
-      </div>
-      <div class="pub-links">
-        {% for link in pub.links %}
-        <a class="pub-link" href="{{ link.href }}">{{ link.label }}</a>
-        {% endfor %}
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
-  {% if data.publications.items.size > data.publications.initial_visible %}
-  <div class="pub-actions">
-    <button id="publications-more" class="pub-more-btn" type="button" data-visible-count="{{ data.publications.initial_visible }}" data-more-label="{{ data.publications.more_label }}" data-less-label="{{ data.publications.less_label }}">{{ data.publications.more_label }}</button>
-  </div>
-  {% endif %}
-</section>
+      </li>
+      {% endfor %}
+    </ol>
+    {% if data.publications.items.size > data.publications.initial_visible %}
+    <div class="pub-actions">
+      <button id="publications-more" class="pub-more-btn" type="button" data-more-label="{{ data.publications.more_label }}" data-less-label="{{ data.publications.less_label }}">{{ data.publications.more_label }}</button>
+    </div>
+    {% endif %}
+  </section>
 
-<footer>
-  <span class="footer-left">{{ data.footer.text }}</span>
-  <div class="footer-links">
-    {% for link in data.footer.links %}
-    <a href="{{ link.href }}">{{ link.label }}</a>
-    {% endfor %}
-  </div>
-</footer>
-
-<div id="lightbox" aria-hidden="true">
-  <button id="lightbox-close" type="button">Close</button>
-  <img src="" alt="">
-</div>
+  <footer>{{ data.footer.text }}</footer>
+</main>
 
 <script>
-  const filterButtons = document.querySelectorAll('.pf-btn');
-  const pubItems = document.querySelectorAll('.pub-item');
+  const newsButtons = document.querySelectorAll('.news-tab');
+  const newsItems = document.querySelectorAll('.news-item');
+
+  function showNewsYear(year) {
+    newsButtons.forEach((button) => {
+      const isActive = button.dataset.year === year;
+      button.classList.toggle('active', isActive);
+      button.setAttribute('aria-pressed', String(isActive));
+    });
+    newsItems.forEach((item) => {
+      item.classList.toggle('hidden-item', item.dataset.year !== year);
+    });
+  }
+
+  newsButtons.forEach((button) => {
+    button.addEventListener('click', () => showNewsYear(button.dataset.year));
+  });
+
+  if (newsButtons.length) {
+    showNewsYear(newsButtons[0].dataset.year);
+  }
+
   const moreButton = document.getElementById('publications-more');
-
-  function applyPublicationVisibility(category) {
-    const activeCategory = category || document.querySelector('.pf-btn.active')?.dataset.filter || 'all';
-    const expanded = moreButton ? moreButton.dataset.expanded === 'true' : false;
-    let matchedIndex = 0;
-
-    pubItems.forEach((item) => {
-      const matches = activeCategory === 'all' || item.dataset.cat === activeCategory;
-      if (!matches) {
-        item.classList.add('hidden-item');
-        item.style.display = 'none';
-        return;
-      }
-
-      matchedIndex += 1;
-      const shouldShow = expanded || matchedIndex <= Number(moreButton?.dataset.visibleCount || pubItems.length);
-      item.classList.toggle('hidden-item', !shouldShow);
-      item.style.display = shouldShow ? '' : 'none';
-    });
-
-    if (moreButton) {
-      const hasMore = matchedIndex > Number(moreButton.dataset.visibleCount);
-      moreButton.style.display = hasMore ? '' : 'none';
-      moreButton.textContent = expanded ? moreButton.dataset.lessLabel : moreButton.dataset.moreLabel;
-    }
-  }
-
-  filterButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      filterButtons.forEach((item) => item.classList.remove('active'));
-      button.classList.add('active');
-      if (moreButton) {
-        moreButton.dataset.expanded = 'false';
-      }
-      applyPublicationVisibility(button.dataset.filter);
-    });
-  });
-
   if (moreButton) {
-    moreButton.dataset.expanded = 'false';
     moreButton.addEventListener('click', () => {
-      moreButton.dataset.expanded = moreButton.dataset.expanded === 'true' ? 'false' : 'true';
-      applyPublicationVisibility();
+      const expanded = moreButton.dataset.expanded === 'true';
+      document.querySelectorAll('.publication.extra-item').forEach((item) => {
+        item.classList.toggle('hidden-item', expanded);
+      });
+      moreButton.dataset.expanded = expanded ? 'false' : 'true';
+      moreButton.textContent = expanded ? moreButton.dataset.moreLabel : moreButton.dataset.lessLabel;
     });
   }
-
-  applyPublicationVisibility();
-
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImage = lightbox.querySelector('img');
-  const lightboxClose = document.getElementById('lightbox-close');
-
-  document.querySelectorAll('[data-lightbox]').forEach((link) => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      lightboxImage.src = link.getAttribute('href');
-      lightboxImage.alt = link.dataset.lightbox;
-      lightbox.classList.add('open');
-      lightbox.setAttribute('aria-hidden', 'false');
-    });
-  });
-
-  function closeLightbox() {
-    lightbox.classList.remove('open');
-    lightbox.setAttribute('aria-hidden', 'true');
-    lightboxImage.src = '';
-    lightboxImage.alt = '';
-  }
-
-  lightboxClose.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', (event) => {
-    if (event.target === lightbox) {
-      closeLightbox();
-    }
-  });
 </script>

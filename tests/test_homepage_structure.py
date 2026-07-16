@@ -27,7 +27,6 @@ class HomepageStructureTest(unittest.TestCase):
             "news",
             "research",
             "publications",
-            "cv",
         ]:
             self.assertIn(f"{section}:", homepage_source)
 
@@ -45,13 +44,24 @@ class HomepageStructureTest(unittest.TestCase):
         self.assertNotIn('id="recruitment"', include_source)
         self.assertNotIn('id="awards"', include_source)
         self.assertNotIn('直博生', include_source)
-        self.assertIn('hidden-item{% endif %}" data-cat="{{ pub.category }}"', include_source)
+        self.assertIn('extra-item hidden-item{% endif %}', include_source)
         self.assertIn('id="publications-more"', include_source)
-        self.assertIn('data-visible-count="{{ data.publications.initial_visible }}"', include_source)
-        self.assertIn("item.classList.toggle('hidden-item', !shouldShow);", include_source)
-        self.assertIn('Download CV', homepage_source)
-        self.assertIn('/files/CV_en.pdf', homepage_source)
-        self.assertTrue((self.root / "files" / "CV_en.pdf").exists())
+        self.assertNotIn('data-lightbox=', include_source)
+        self.assertNotIn('pub-filter', include_source)
+        self.assertNotIn('hero-eyebrow', include_source)
+        self.assertNotIn('pub-thumb', include_source)
+        self.assertIn('class="publication-image"', include_source)
+        self.assertIn('class="news-tabs"', include_source)
+        self.assertIn('data-year="{{ item.date | slice: 0, 4 }}"', include_source)
+        self.assertIn('class="research-description"', include_source)
+        self.assertIn('years:', homepage_source)
+        self.assertIn('name: "Li Hao"', homepage_source)
+        self.assertIn('title: "Selected Publications"', homepage_source)
+        self.assertNotIn('TDiscNet:', homepage_source)
+        self.assertNotIn('DHGAT:', homepage_source)
+        self.assertNotIn('ORCID', homepage_source)
+        self.assertNotIn('data.cv.file', include_source)
+        self.assertIn('ai-google-scholar', include_source)
 
 
 if __name__ == "__main__":
